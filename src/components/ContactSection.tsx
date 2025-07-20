@@ -104,22 +104,22 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 lg:py-32 bg-gradient-to-b from-muted/20 to-background">
+    <section id="contact" className="py-12 sm:py-16 lg:py-20 xl:py-32 bg-gradient-to-b from-muted/20 to-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+        <div className="text-center mb-12 lg:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 lg:mb-6">
             Get in <span className="gradient-primary bg-clip-text text-transparent">Touch</span>
           </h2>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto px-4 sm:px-0">
             Ready to collaborate on your next AI project? Let's discuss how we can work together to bring your ideas to life.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
           {/* Contact Information */}
-          <div className="space-y-8">
+          <div className="space-y-6 lg:space-y-8">
             <div>
-              <h3 className="text-2xl font-bold mb-6">Let's Connect</h3>
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 lg:mb-6">Let's Connect</h3>
               <p className="text-muted-foreground mb-8">
                 I'm always excited to discuss new opportunities, collaborations, and innovative AI projects. 
                 Whether you're looking for a technical consultant, hackathon partner, or full-time AI engineer, 

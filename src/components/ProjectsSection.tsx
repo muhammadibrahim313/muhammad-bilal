@@ -106,22 +106,22 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 lg:py-32 bg-gradient-to-b from-muted/20 to-background">
+    <section id="projects" className="py-12 sm:py-16 lg:py-20 xl:py-32 bg-gradient-to-b from-muted/20 to-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+        <div className="text-center mb-12 lg:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 lg:mb-6">
             Featured <span className="gradient-primary bg-clip-text text-transparent">Projects</span>
           </h2>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto px-4 sm:px-0">
             Showcase of award-winning projects from international hackathons and competitions
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid gap-6 lg:gap-8 xl:grid-cols-2">
           {projects.map((project) => (
             <Card key={project.id} className="overflow-hidden glass-card hover:shadow-hover transition-all duration-500 group">
               {/* Project Image */}
-              <div className="relative overflow-hidden h-64">
+              <div className="relative overflow-hidden h-48 sm:h-56 lg:h-64">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -163,19 +163,19 @@ const ProjectsSection = () => {
               </div>
 
               {/* Project Content */}
-              <div className="p-6 space-y-4">
+              <div className="p-4 sm:p-6 space-y-3 sm:space-y-4">
                 <div>
-                  <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">
+                  <h3 className="text-xl sm:text-2xl font-bold mb-2 group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-muted-foreground mb-3">{project.description}</p>
-                  <p className="text-sm leading-relaxed">{project.longDescription}</p>
+                  <p className="text-muted-foreground mb-3 text-sm sm:text-base">{project.description}</p>
+                  <p className="text-xs sm:text-sm leading-relaxed">{project.longDescription}</p>
                 </div>
 
                 {/* Tech Stack */}
                 <div>
                   <h4 className="font-semibold text-sm mb-2 text-primary">Tech Stack:</h4>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2">
                     {project.techStack.map((tech, index) => (
                       <Badge key={index} variant="outline" className="text-xs">
                         {tech}
@@ -187,7 +187,7 @@ const ProjectsSection = () => {
                 {/* Features */}
                 <div>
                   <h4 className="font-semibold text-sm mb-2 text-primary">Key Features:</h4>
-                  <ul className="text-sm text-muted-foreground space-y-1">
+                  <ul className="text-xs sm:text-sm text-muted-foreground space-y-1">
                     {project.features.map((feature, index) => (
                       <li key={index} className="flex items-center">
                         <span className="w-1.5 h-1.5 bg-primary rounded-full mr-2 flex-shrink-0" />
@@ -199,37 +199,37 @@ const ProjectsSection = () => {
 
                 {/* Special Attributes */}
                 {(project.impact || project.role || project.innovation || project.languages) && (
-                  <div className="pt-4 border-t border-border">
+                  <div className="pt-3 sm:pt-4 border-t border-border space-y-2">
                     {project.impact && (
-                      <p className="text-sm text-primary font-medium">
+                      <p className="text-xs sm:text-sm text-primary font-medium">
                         💡 Impact: {project.impact}
                       </p>
                     )}
                     {project.role && (
-                      <p className="text-sm text-primary font-medium">
+                      <p className="text-xs sm:text-sm text-primary font-medium">
                         👨‍💻 Role: {project.role}
                       </p>
                     )}
                     {project.innovation && (
-                      <p className="text-sm text-primary font-medium">
+                      <p className="text-xs sm:text-sm text-primary font-medium">
                         🚀 Innovation: {project.innovation}
                       </p>
                     )}
                     {project.languages && (
-                      <p className="text-sm text-primary font-medium">
+                      <p className="text-xs sm:text-sm text-primary font-medium">
                         🌍 Languages: {project.languages.join(', ')}
                       </p>
                     )}
                   </div>
                 )}
 
-                {/* Action Buttons for Desktop */}
-                <div className="flex space-x-3 pt-2">
+                {/* Action Buttons */}
+                <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3 pt-2">
                   {project.github && (
                     <Button
                       variant="outline"
                       size="sm"
-                      className="flex-1"
+                      className="flex-1 w-full sm:w-auto"
                       onClick={() => window.open(project.github, '_blank')}
                     >
                       <Github className="w-4 h-4 mr-2" />
@@ -239,7 +239,7 @@ const ProjectsSection = () => {
                   {project.demo && (
                     <Button
                       size="sm"
-                      className="flex-1 gradient-primary"
+                      className="flex-1 w-full sm:w-auto gradient-primary"
                       onClick={() => window.open(project.demo, '_blank')}
                     >
                       <ExternalLink className="w-4 h-4 mr-2" />

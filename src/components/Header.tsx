@@ -40,22 +40,22 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="flex items-center justify-between h-14 sm:h-16 lg:h-20">
           {/* Logo */}
           <div 
-            className="text-xl lg:text-2xl font-bold gradient-primary bg-clip-text text-transparent cursor-pointer"
+            className="text-lg sm:text-xl lg:text-2xl font-bold gradient-primary bg-clip-text text-transparent cursor-pointer"
             onClick={() => scrollToSection('#home')}
           >
             Muhammad Bilal
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-foreground hover:text-primary transition-colors nav-link font-medium"
+                className="text-foreground hover:text-primary transition-colors nav-link font-medium text-sm lg:text-base"
               >
                 {item.name}
               </button>

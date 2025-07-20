@@ -57,28 +57,32 @@ const HeroSection = () => {
         ))}
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-20 lg:pt-32 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-8rem)]">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 lg:pt-32 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[calc(100vh-4rem)] sm:min-h-[calc(100vh-5rem)] lg:min-h-[calc(100vh-8rem)]">
           {/* Left Column - Content */}
-          <div className="text-center lg:text-left space-y-8">
-            <div className="space-y-4">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+          <div className="text-center lg:text-left space-y-6 lg:space-y-8 order-2 lg:order-1">
+            <div className="space-y-3 lg:space-y-4">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                 <span className="block text-foreground">Muhammad</span>
                 <span className="block gradient-primary bg-clip-text text-transparent">
                   Bilal
                 </span>
               </h1>
               
-              <div className="h-16 flex items-center justify-center lg:justify-start">
-                <p className="text-xl sm:text-2xl text-muted-foreground font-medium">
+              <div className="h-12 sm:h-14 lg:h-16 flex items-center justify-center lg:justify-start">
+                <p className="text-lg sm:text-xl lg:text-2xl text-muted-foreground font-medium px-2">
                   {currentText}
                   <span className="animate-pulse">|</span>
                 </p>
               </div>
 
-              <div className="flex items-center justify-center lg:justify-start text-muted-foreground space-x-2">
-                <MapPin className="w-5 h-5 text-primary" />
-                <span>Remote AI Engineer at ZenData Labs (USA) | Based in Pakistan</span>
+              <div className="flex flex-col sm:flex-row sm:items-center justify-center lg:justify-start text-muted-foreground space-y-2 sm:space-y-0 sm:space-x-2 px-4 sm:px-0">
+                <div className="flex items-center justify-center sm:justify-start">
+                  <MapPin className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
+                  <span className="text-sm sm:text-base text-center sm:text-left">Remote AI Engineer at ZenData Labs (USA)</span>
+                </div>
+                <span className="hidden sm:inline">|</span>
+                <span className="text-sm sm:text-base text-center sm:text-left">Based in Pakistan</span>
               </div>
             </div>
 
@@ -148,33 +152,33 @@ const HeroSection = () => {
           </div>
 
           {/* Right Column - Profile Image & Stats */}
-          <div className="flex flex-col items-center space-y-8">
+          <div className="flex flex-col items-center space-y-6 lg:space-y-8 order-1 lg:order-2">
             {/* Profile Image */}
             <div className="relative">
-              <div className="w-80 h-80 rounded-full overflow-hidden shadow-hover glow-primary ring-4 ring-primary/20">
+              <div className="w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden shadow-hover glow-primary ring-4 ring-primary/20">
                 <img
                   src={profileImage}
                   alt="Muhammad Bilal - AI Engineer"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              <div className="absolute -top-4 -right-4 w-16 h-16 gradient-primary rounded-full flex items-center justify-center glow-primary">
-                <span className="text-2xl">🏆</span>
+              <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 w-12 h-12 sm:w-16 sm:h-16 gradient-primary rounded-full flex items-center justify-center glow-primary">
+                <span className="text-lg sm:text-2xl">🏆</span>
               </div>
             </div>
 
             {/* Stats Grid */}
-            <div className="grid grid-cols-2 gap-4 w-full max-w-md">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 w-full max-w-sm sm:max-w-md">
               {stats.map((stat, index) => (
-                <Card key={index} className="p-4 glass-card hover:shadow-hover transition-all duration-300 group">
-                  <div className="text-center space-y-2">
-                    <div className="text-2xl group-hover:scale-110 transition-transform">
+                <Card key={index} className="p-3 sm:p-4 glass-card hover:shadow-hover transition-all duration-300 group">
+                  <div className="text-center space-y-1 sm:space-y-2">
+                    <div className="text-xl sm:text-2xl group-hover:scale-110 transition-transform">
                       {stat.icon}
                     </div>
-                    <div className="text-2xl font-bold gradient-primary bg-clip-text text-transparent">
+                    <div className="text-lg sm:text-2xl font-bold gradient-primary bg-clip-text text-transparent">
                       {stat.number}
                     </div>
-                    <div className="text-sm text-muted-foreground leading-tight">
+                    <div className="text-xs sm:text-sm text-muted-foreground leading-tight">
                       {stat.label}
                     </div>
                   </div>

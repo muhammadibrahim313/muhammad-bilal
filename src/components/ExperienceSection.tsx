@@ -72,22 +72,22 @@ const ExperienceSection = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 lg:py-32 bg-gradient-to-b from-background to-muted/20">
+    <section id="experience" className="py-12 sm:py-16 lg:py-20 xl:py-32 bg-gradient-to-b from-background to-muted/20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+        <div className="text-center mb-12 lg:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 lg:mb-6">
             Professional <span className="gradient-primary bg-clip-text text-transparent">Experience</span>
           </h2>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto px-4 sm:px-0">
             Journey through my professional career in AI engineering and software development
           </p>
         </div>
 
         <div className="relative">
           {/* Timeline Line */}
-          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-accent to-primary hidden md:block" />
+          <div className="absolute left-6 sm:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-accent to-primary hidden md:block" />
 
-          <div className="space-y-8">
+          <div className="space-y-6 lg:space-y-8">
             {experiences.map((experience, index) => (
               <div key={index} className="relative">
                 {/* Timeline Dot */}
