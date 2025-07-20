@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Github, Linkedin, ExternalLink, Download, Mail, Phone, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import profileImage from '@/assets/muhammad-bilal-profile.jpg';
+import profileImage from '/lovable-uploads/4a8726c0-4659-4ed5-8ae3-8e2dc22e4ae5.png';
 
 const HeroSection = () => {
   const [currentText, setCurrentText] = useState('');
